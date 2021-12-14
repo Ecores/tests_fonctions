@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+
+
 class MonApp extends StatefulWidget {
   const MonApp({Key? monAppKey}) : super(key: monAppKey);
 
@@ -16,36 +18,36 @@ class _MonAppState extends State<MonApp> {
         appBar: AppBar(
           title: const Text(' Test de fonctions Flutter'),
         ),
-        body: const SingleChildScrollView(child: MiseEnPage()),
+        body: SingleChildScrollView(child: MiseEnPage()),
       ),
     );
   }
 }
 
 class MiseEnPage extends StatefulWidget {
-  const MiseEnPage({Key? miseEnPageKey}) : super(key: miseEnPageKey);
 
   @override
   State<MiseEnPage> createState() => _MiseEnPageState();
 }
 
 class _MiseEnPageState extends State<MiseEnPage> {
-  final textFieldValueHolder = TextEditingController();
-  final textFieldValueHolder2 = TextEditingController();
 
-  String result = '';
-  getTextInputData() {
-    setState(() {
-      result = textFieldValueHolder.text;
-    });
-  }
-
-  String result2 = '';
-  getTextInputData2() {
-    setState(() {
-      result2 = textFieldValueHolder2.text;
-    });
-  }
+  // final textFieldValueHolder = TextEditingController();
+  // final textFieldValueHolder2 = TextEditingController();
+  //
+  // String result = '';
+  // getTextInputData() {
+  //   setState(() {
+  //     result = textFieldValueHolder.text;
+  //   });
+  // }
+  //
+  // String result2 = '';
+  // getTextInputData2() {
+  //   setState(() {
+  //     result2 = textFieldValueHolder2.text;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -80,22 +82,22 @@ class _MiseEnPageState extends State<MiseEnPage> {
                 labelText: 'Entrez le Prénom'),
           ),
         ),
-        ElevatedButton(onPressed: getTextInputData, child:  Text("")),
+        ElevatedButton(onPressed: getTextInputData, child:  const Text("")),
 
-        ElevatedButton(onPressed: getTextInputData2, child: Text("")),
+        ElevatedButton(onPressed: getTextInputData2, child: const Text("")),
 
         Container(
           height: 80,
           width: double.infinity,
           margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-          child: Text("$result", textAlign: TextAlign.center, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
+          child: Text(result, textAlign: TextAlign.center, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
         ),
 
         Container(
           height: 80,
           width: double.infinity,
           margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-          child: Text("$result2", textAlign: TextAlign.center, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
+          child: Text(result2, textAlign: TextAlign.center, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
         ),
       ],
     );
