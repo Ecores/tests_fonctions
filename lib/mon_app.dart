@@ -32,22 +32,22 @@ class MiseEnPage extends StatefulWidget {
 
 class _MiseEnPageState extends State<MiseEnPage> {
 
-  // final textFieldValueHolder = TextEditingController();
-  // final textFieldValueHolder2 = TextEditingController();
-  //
-  // String result = '';
-  // getTextInputData() {
-  //   setState(() {
-  //     result = textFieldValueHolder.text;
-  //   });
-  // }
-  //
-  // String result2 = '';
-  // getTextInputData2() {
-  //   setState(() {
-  //     result2 = textFieldValueHolder2.text;
-  //   });
-  // }
+  final textFieldValueHolder = TextEditingController();
+  final textFieldValueHolder2 = TextEditingController();
+
+  String result = '';
+  getTextInputData() {
+    setState(() {
+      result = textFieldValueHolder.text;
+    });
+  }
+
+  String result2 = '';
+  getTextInputData2() {
+    setState(() {
+      result2 = textFieldValueHolder2.text;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
