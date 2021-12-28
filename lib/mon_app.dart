@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 
-
 class MonApp extends StatefulWidget {
   const MonApp({Key? monAppKey}) : super(key: monAppKey);
 
