@@ -81,6 +81,7 @@ class _MiseEnPageState extends State<MiseEnPage> {
                 labelText: 'Entrez le Prénom'),
           ),
         ),
+
         ElevatedButton(onPressed: getTextInputData, child:  const Text("")),
 
         ElevatedButton(onPressed: getTextInputData2, child: const Text("")),
